@@ -72,31 +72,31 @@ public class UserGetStepDefinition {
         }
     }
 
-    @Then("I can validate the response of service <code>")
-    public void iCanValidateTheResponseOfServiceCode() {
-        Actor user = OnStage.theActorCalled("user");
+   @Then("I can validate the response of service <code>")
+   public void iCanValidateTheResponseOfServiceCode() {
+       Actor user = OnStage.theActorCalled("user");
 
-        List<String[]> users = ExcelReader.read(
-                "src/test/resources/data/users.xlsx",
-                "GET"
-        );
+       List<String[]> users = ExcelReader.read(
+               "src/test/resources/data/users.xlsx",
+               "GET"
+       );
 
-        for (String[] row : users) {
-            if (row == null || row.length <= 2) continue;
-            String code = row[2];
-            try {
-                int expected = Integer.parseInt(code);
-                user.should(
-                        seeThat("The response code is",
-                                act -> SerenityRest.lastResponse().statusCode(),
-                                equalTo(expected)
-                        )
-                );
-            } catch (NumberFormatException e) {
-                System.out.println("Código esperado inválido: " + code);
-            }
-        }
-    }
+       for (String[] row : users) {
+           if (row == null || row.length <= 2) continue;
+           String code = row[2];
+
+           int status = SerenityRest.lastResponse() != null ? SerenityRest.lastResponse().statusCode() : -1;
+
+           try {
+               int expected = Integer.parseInt(code);
+               if (status != expected) {
+                   throw new AssertionError("Código esperado: " + expected + " pero se recibió: " + status);
+               }
+           } catch (NumberFormatException e) {
+               throw new AssertionError("Código esperado inválido: " + code);
+           }
+       }
+   }
 }
 
 
