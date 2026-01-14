@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Config User" skipped="0" tests="2" time="7.37" timestamp="2026-01-14 10:32:07"><testcase name="Create user successfully"/><testcase name="User consulted successfully."><failure message="&#13;&#10;Expected: &lt;200&gt;&#13;&#10;     but: was &lt;404&gt;" type="java.lang.AssertionError">&#13;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Config User" skipped="0" tests="2" time="10.98" timestamp="2026-01-14 11:37:50"><testcase name="Create user successfully"/><testcase name="User consulted successfully."><failure message="&#13;&#10;Expected: &lt;200&gt;&#13;&#10;     but: was &lt;404&gt;" type="java.lang.AssertionError">&#13;
 Expected: &lt;200&gt;&#13;
      but: was &lt;404&gt;</failure><system-err>&#13;
 Expected: &lt;200&gt;&#13;
