@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Create User","Create user successfully.","SUCCESS","2026-01-11T22:30:48.1173023-05:00[America/Bogota]","0.0","9.46"
+"Create User","User consulted successfully.","ERROR","2026-01-11T22:47:42.008023-05:00[America/Bogota]","0.0","8.5"

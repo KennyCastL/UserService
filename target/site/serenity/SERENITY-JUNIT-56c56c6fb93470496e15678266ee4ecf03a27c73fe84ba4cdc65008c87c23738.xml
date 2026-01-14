@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Operations User" skipped="0" tests="1" time="11.2" timestamp="2026-01-11 10:53:17"><testcase name="User consulted successfully."><error message="Cannot invoke method getParser() on null object" type="java.lang.NullPointerException">Cannot invoke method getParser() on null object</error><system-err>Cannot invoke method getParser() on null object&#13;
+io.restassured.internal.support.Prettifier.getPrettifiedBodyIfPossible(Prettifier.groovy:51)&#13;
+io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.asPrettyString(RestAssuredResponseOptionsGroovyImpl.groovy:184)&#13;
+io.restassured.internal.RestAssuredResponseOptionsImpl.asPrettyString(RestAssuredResponseOptionsImpl.java:242)&#13;
+io.petstore.swagger.tasks.user.GetUserTask.performAs(GetUserTask.java:46)&#13;
+io.petstore.swagger.stepDefinitions.UserGetStepDefinition.iConsumeTheEndpointAndIConsultTheUserInformationUserName(UserGetStepDefinition.java:19)&#13;
+✽.I consume the endpoint "/user/{userName}" and I consult the user information userName"KAcll"(file:///C:/Users/pc/Documents/Serenity/petStoreService/src/test/resources/features/User.feature:17)&#13;
+</system-err></testcase></testsuite>
